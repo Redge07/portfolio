@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
-import "../styles/pages/home.scss";
 import Header from "../components/Header";
+import Github from "../components/Github";
 
 const Home = () => {
   const [letterActive, setLetterActive] = useState("");
+  const [copy, setCopy] = useState(false);
   const adjectifs = ["développeur", "data analyst", "sportif"];
   useEffect(() => {
     let timeid;
@@ -40,11 +41,20 @@ const Home = () => {
         position = [i, j + 1];
       }
     };
-    interval();
+    setTimeout(() => {
+      interval();
+    }, 500);
     return () => {
       clearTimeout(timeid);
     };
   }, []);
+  const handleCopy = () => {
+    navigator.clipboard.writeText("mathonregis28@gmail.com");
+    setCopy(true);
+    setTimeout(() => {
+      setCopy(false);
+    }, 2000);
+  };
   return (
     <div className="container-home">
       <Header />
@@ -57,11 +67,15 @@ const Home = () => {
             je suis <span>{letterActive}</span>
           </p>
         </div>
+        <div className="formation">
+          <p>
+            Master <span>I</span>ngénierie et <span>S</span>cience des données
+            orientées <span>M</span>étiers - <span>A</span>ppliquées à la{" "}
+            <span>G</span>estion de production
+          </p>
+        </div>
         <div className="links">
-          <div className="github">
-            <ion-icon name="logo-github"></ion-icon>
-            <ion-icon name="arrow-forward-outline"></ion-icon>
-          </div>
+          <Github />
           <div className="cv">
             <a
               href="https://www.vialleconstruction.ca/realisations/IMG/Traverse/1%20(1).webp"
@@ -74,7 +88,16 @@ const Home = () => {
           </div>
           <div className="mail">
             <a href="mailto:mathonregis28@gmail.com">mathonregis28@gmail.com</a>
-            <button>Copier</button>
+            <button
+              onClick={handleCopy}
+              style={
+                copy
+                  ? { background: "#07d707", color: "white" }
+                  : { background: "white", color: "black" }
+              }
+            >
+              {copy ? "Copié !" : "Copier"}
+            </button>
           </div>
         </div>
       </div>

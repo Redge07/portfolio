@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import "./styles/settings.scss";
+import "./styles/index.scss";
 import Home from "./pages/Home";
+import Realisations from "./pages/Realisations";
 
 const App = () => {
   const nbEtoiles = 60;
@@ -30,7 +31,7 @@ const App = () => {
     <div className="App">
       <Home />
       <div className="etoiles" ref={refEtoiles}>
-        {listEtoile.map((etoile, index) => {
+        {listEtoile.map((etoile) => {
           const left = Math.floor(Math.random() * 100);
           const top = Math.floor(Math.random() * 100);
 
@@ -46,6 +47,7 @@ const App = () => {
       <div className="circle">
         <div></div>
       </div>
+      <Realisations />
     </div>
   );
 };

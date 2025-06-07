@@ -1,0 +1,39 @@
+.github {
+    grid-area: git;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 0 10px;
+    padding: 5px 20px;
+    background: $backgroundDark;
+    box-shadow: 0 0 2px 0 white;
+    border-radius: 30px;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+    transition: 0.2s;
+
+    &:hover {
+        scale: 0.9;
+    }
+
+    &:hover ion-icon {
+        color: white;
+    }
+
+    ion-icon {
+        font-size: 50px;
+        transition: 0.5s;
+        color: rgb(173, 173, 173);
+
+    }
+
+    ion-icon:nth-child(2) {
+        font-size: 25px;
+        color: black;
+        background: white;
+        padding: 5px;
+        border-radius: 50%;
+    }
+}
