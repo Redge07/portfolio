@@ -1,0 +1,93 @@
+@font-face {
+    font-family: "Poppins";
+    src: url("./assets/fonts/Poppins-Regular.ttf");
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.App {
+    font-family: "poppins";
+    min-height: 100vh;
+    background: black;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+
+    .etoiles {
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+
+        .etoile {
+            position: absolute;
+            width: 5px;
+            left: 20%;
+            aspect-ratio: 1;
+            background: white;
+            animation: 50s etoile linear infinite;
+            transition: 1s;
+            border-radius: 50%;
+
+            @keyframes etoile {
+                12% {
+                    transform: translate(38px, 13px);
+                }
+
+                25% {
+                    transform: translate(50px, 50px);
+                }
+
+                37% {
+                    transform: translate(37px, 87px);
+                }
+
+                50% {
+                    transform: translate(0px, 100px);
+                }
+
+                62% {
+                    transform: translate(-37px, 87px);
+                }
+
+                75% {
+                    transform: translate(-50px, 50px);
+                }
+
+                88% {
+                    transform: translate(-37px, 13px);
+                }
+            }
+        }
+    }
+
+    .circle {
+        position: absolute;
+        width: 100%;
+        height: 100px;
+        top: 100vh;
+        transform: translateY(-100%);
+
+        div {
+            position: absolute;
+            width: 300%;
+            aspect-ratio: 1;
+            background: black;
+            border-top: solid 5px white;
+            box-shadow: 0 0 100px 0 white, 0 0 100px 0 purple, 0 0 300px 100px blue,
+                inset 0 0 15px 0 white;
+            border-radius: 50%;
+            left: 50%;
+            top: 0;
+            transform: translateX(-50%);
+        }
+    }
+}
