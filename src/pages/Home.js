@@ -15,26 +15,29 @@ const Home = () => {
           if (prev === "") {
             if (i === adjectifs.length - 1) {
               position = [0, 0];
+              timeid = setTimeout(interval, 1000);
               return "";
             } else {
               position = [i + 1, 0];
+              timeid = setTimeout(interval, 1000);
               return "";
             }
           } else {
-            return prev.slice(1);
+            timeid = setTimeout(interval, 100);
+            return prev.slice(0, -1);
           }
         });
-        timeid = setTimeout(interval, 100);
       } else {
         setLetterActive((prev) => {
-          if (j === 0) {
-            return adjectifs[i][j];
+          if (prev.length === adjectifs[i].length - 1) {
+            timeid = setTimeout(interval, 2000);
+            return prev + adjectifs[i][j];
           } else {
+            timeid = setTimeout(interval, 300);
             return prev + adjectifs[i][j];
           }
         });
         position = [i, j + 1];
-        timeid = setTimeout(interval, 500);
       }
     };
     interval();

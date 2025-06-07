@@ -41,11 +41,13 @@
                 font-weight: bold;
                 letter-spacing: 3px;
                 text-transform: uppercase;
+                font-weight: bold;
 
                 span {
-                    font-family: 'Courier New', Courier, monospace;
                     position: relative;
                     transition: 0.5s;
+                    font-weight: bold;
+                    color: white;
 
                     &::after {
                         content: '';
