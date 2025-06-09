@@ -48,12 +48,17 @@ const Home = () => {
       clearTimeout(timeid);
     };
   }, []);
-  const handleCopy = () => {
+  const handleCopy = (e) => {
     navigator.clipboard.writeText("mathonregis28@gmail.com");
     setCopy(true);
     setTimeout(() => {
       setCopy(false);
     }, 2000);
+    const button = e.currentTarget;
+    button.style.transform = "scale(0.9)";
+    setTimeout(() => {
+      button.style.transform = "scale(1)";
+    }, 100);
   };
   return (
     <div className="container-home">
@@ -89,7 +94,7 @@ const Home = () => {
           <div className="mail">
             <a href="mailto:mathonregis28@gmail.com">mathonregis28@gmail.com</a>
             <button
-              onClick={handleCopy}
+              onClick={(e) => handleCopy(e)}
               style={
                 copy
                   ? { background: "#07d707", color: "white" }
