@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 import "./styles/index.scss";
 import Home from "./pages/Home";
 import Realisations from "./pages/Realisations";
+import Lenis from "@studio-freight/lenis";
 
 const App = () => {
   const nbEtoiles = 60;
@@ -26,6 +27,24 @@ const App = () => {
         }
       }, time);
     });
+  }, []);
+
+  useEffect(() => {
+    const lenis = new Lenis({
+      duration: 1.5,
+      smooth: true,
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    });
+
+    const raf = (time) => {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    };
+    requestAnimationFrame(raf);
+
+    return () => {
+      lenis.destroy();
+    };
   }, []);
   return (
     <div className="App">

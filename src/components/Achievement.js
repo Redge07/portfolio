@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import showTechnologies from "../utils/showTechnologies";
 
 const Achievement = ({ achievement }) => {
@@ -14,9 +14,28 @@ const Achievement = ({ achievement }) => {
     date,
     technologies,
   } = achievement;
+  const refAchievement = useRef();
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          refAchievement.current.style.transform = "translateY(0px) scale(1)";
+        } else {
+          refAchievement.current.style.transform =
+            "translateY(50px) scale(0.5)";
+        }
+      });
+    });
+    observer.observe(refAchievement.current);
+    return () => {
+      observer.unobserve(refAchievement.current);
+    };
+  }, []);
   return (
     <div className="achievement">
       <a
+        ref={refAchievement}
         href={link}
         style={{
           background: `linear-gradient(to top, ${colorBottom}, ${colorTop} 50%, ${colorTop} 100%)`,
