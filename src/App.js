@@ -3,6 +3,7 @@ import "./styles/index.scss";
 import Home from "./pages/Home";
 import Realisations from "./pages/Realisations";
 import Lenis from "@studio-freight/lenis";
+import Parcours from "./pages/Parcours";
 
 const App = () => {
   const nbEtoiles = 60;
@@ -67,6 +68,7 @@ const App = () => {
         <div></div>
       </div>
       <Realisations />
+      <Parcours />
     </div>
   );
 };

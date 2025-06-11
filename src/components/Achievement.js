@@ -20,10 +20,10 @@ const Achievement = ({ achievement }) => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          refAchievement.current.style.transform = "translateY(0px) scale(1)";
+          refAchievement.current.style.transform = "scale(1)";
         } else {
           refAchievement.current.style.transform =
-            "translateY(50px) scale(0.5)";
+            "scale(0.5)";
         }
       });
     });

@@ -1,24 +1,11 @@
 .container-achievements {
-    margin: 200px 0;
+    margin: 200px 0 0;
     z-index: 1;
     position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: black;
-
-    h2 {
-        text-shadow: 0 0 30px;
-        font-size: 3rem;
-
-        span {
-            font-family: "Indie";
-            font-size: 4rem;
-            background: linear-gradient(288deg, #ff8000, #f0c 53.2394%, #04f);
-            -webkit-text-fill-color: transparent;
-            -webkit-background-clip: text;
-        }
-    }
+    background: $black;
 
     .intro {
         margin-top: 20px;
@@ -56,7 +43,7 @@
                 border: 10px solid rgb(19, 19, 19);
                 border-radius: 30px;
                 transition: 0.5s;
-                transform: translateY(50px) scale(0.5);
+                transform: scale(0.5);
 
                 &:hover .picture {
                     rotate: -5deg;
@@ -123,13 +110,6 @@
                     color: gray;
                 }
 
-                .date {
-                    background: rgba(134, 134, 134, 0.2);
-                    color: white;
-                    padding: 5px 10px;
-                    border-radius: 10px;
-                }
-
                 ul {
                     display: flex;
                     flex-wrap: wrap;
@@ -137,9 +117,7 @@
                     gap: 20px;
 
                     li {
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
+                        @include centerChild;
                         gap: 5px;
                         background: rgba(134, 134, 134, 0.2);
                         color: white;

@@ -124,18 +124,14 @@
             .cv {
                 grid-area: cv;
                 padding: 0 10px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include centerChild;
                 gap: 5px;
                 cursor: pointer;
             }
 
             .mail {
                 grid-area: mail;
-                display: flex;
-                justify-content: center;
-                align-items: center;
+                @include centerChild;
                 gap: 10px;
 
                 button {

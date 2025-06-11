@@ -12,6 +12,13 @@
 
 $whiteDark: rgb(192, 192, 192);
 $backgroundDark : rgba(134, 134, 134, 0.2);
+$black: black;
+
+@mixin centerChild {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
 html,
 body {
@@ -33,11 +40,31 @@ body {
 .App {
     font-family: "poppins", "Poppins2";
     min-height: 100vh;
-    background: black;
+    background: $black;
     color: white;
     text-align: center;
     overflow: hidden;
     position: relative;
+
+    h2 {
+        text-shadow: 0 0 30px;
+        font-size: 3rem;
+
+        span {
+            font-family: "Indie";
+            font-size: 4rem;
+            background: linear-gradient(288deg, #ff8000, #f0c 53.2394%, #04f);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
+        }
+    }
+
+    .date {
+        background: rgba(134, 134, 134, 0.2);
+        color: white;
+        padding: 5px 10px;
+        border-radius: 10px;
+    }
 
     .etoiles {
         position: absolute;
@@ -109,9 +136,5 @@ body {
             transform: translateX(-50%);
         }
     }
-
-    // background: linear-gradient(288deg, #ff8000, #f0c 53.2394%, #04f);
-    // -webkit-text-fill-color: transparent;
-    // -webkit-background-clip: text;
 
 }
