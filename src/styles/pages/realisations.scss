@@ -109,28 +109,6 @@
                 p {
                     color: gray;
                 }
-
-                ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    justify-content: start;
-                    gap: 20px;
-
-                    li {
-                        @include centerChild;
-                        gap: 5px;
-                        background: rgba(134, 134, 134, 0.2);
-                        color: white;
-                        padding: 5px 10px;
-                        border-radius: 30px;
-                        border: solid 1px white;
-
-                        .icon {
-                            width: 20px;
-                            font-size: 1.5rem;
-                        }
-                    }
-                }
             }
         }
     }

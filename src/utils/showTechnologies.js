@@ -1,3 +1,5 @@
+import { li } from "framer-motion/client";
+
 const showTechnologies = (technologie) => {
   switch (technologie) {
     case "HTML":
@@ -79,8 +81,38 @@ const showTechnologies = (technologie) => {
           <span>React</span>
         </li>
       );
+    case "Power BI":
+      return (
+        <li>
+          <img src="./images/powerbi.svg" alt="" className="icon" />
+          <span>Power BI</span>
+        </li>
+      );
+    case "VBA":
+      return (
+        <li>
+          <img
+            src="./images/vba.svg"
+            alt=""
+            className="icon"
+            style={{ width: "30px" }}
+          />
+          <span>VBA</span>
+        </li>
+      );
+    case "Excel":
+      return (
+        <li>
+          <img
+            src="./images/excel.png"
+            alt=""
+            className="icon"
+          />
+          <span>Excel</span>
+        </li>
+      );
     default:
-      return null;
+      return <li>{technologie}</li>;
   }
 };
 

@@ -22,8 +22,7 @@ const Achievement = ({ achievement }) => {
         if (entry.isIntersecting) {
           refAchievement.current.style.transform = "scale(1)";
         } else {
-          refAchievement.current.style.transform =
-            "scale(0.5)";
+          refAchievement.current.style.transform = "scale(0.5)";
         }
       });
     });
@@ -61,7 +60,7 @@ const Achievement = ({ achievement }) => {
         </h3>
         <p>{description}</p>
         <span className="date">{date}</span>
-        <ul>{technologies.map(showTechnologies)}</ul>
+        <ul className="technologies">{technologies.map(showTechnologies)}</ul>
       </div>
     </div>
   );
