@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Realisations from "./pages/Realisations";
 import Lenis from "@studio-freight/lenis";
 import Parcours from "./pages/Parcours";
+import Skills from "./pages/Skills";
 
 const App = () => {
   const nbEtoiles = 60;
@@ -69,6 +70,7 @@ const App = () => {
       </div>
       <Realisations />
       <Parcours />
+      <Skills />
     </div>
   );
 };

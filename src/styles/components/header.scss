@@ -9,17 +9,17 @@ header {
     z-index: 1;
 
     .photo-profil {
-        min-width: 80px;
-        min-height: 80px;
-        max-width: 80px;
-        max-height: 80px;
+        min-width: 100px;
+        min-height: 100px;
+        max-width: 100px;
+        max-height: 100px;
         border-radius: 50%;
         overflow: hidden;
 
         img {
             object-fit: cover;
-            width: 80px;
-            height: 80px;
+            width: 100px;
+            height: 100px;
         }
     }
 

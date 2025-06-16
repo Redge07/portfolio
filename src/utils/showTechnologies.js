@@ -1,5 +1,3 @@
-import { li } from "framer-motion/client";
-
 const showTechnologies = (technologie) => {
   switch (technologie) {
     case "HTML":
@@ -48,14 +46,14 @@ const showTechnologies = (technologie) => {
     case "Python":
       return (
         <li>
-          <img src="./images/python.svg" alt="" className="icon" />
+          <img src="./images/logo/python.svg" alt="" className="icon" />
           <span>Python</span>
         </li>
       );
     case "Redux":
       return (
         <li>
-          <img src="./images/redux.png" alt="" className="icon" />
+          <img src="./images/logo/redux.png" alt="" className="icon" />
           <span>Redux</span>
         </li>
       );
@@ -63,7 +61,7 @@ const showTechnologies = (technologie) => {
       return (
         <li>
           <img
-            src="./images/sql.png"
+            src="./images/logo/sql.png"
             alt=""
             className="icon"
             style={{ width: "50px" }}
@@ -84,7 +82,7 @@ const showTechnologies = (technologie) => {
     case "Power BI":
       return (
         <li>
-          <img src="./images/powerbi.svg" alt="" className="icon" />
+          <img src="./images/logo/powerbi.svg" alt="" className="icon" />
           <span>Power BI</span>
         </li>
       );
@@ -92,7 +90,7 @@ const showTechnologies = (technologie) => {
       return (
         <li>
           <img
-            src="./images/vba.svg"
+            src="./images/logo/vba.svg"
             alt=""
             className="icon"
             style={{ width: "30px" }}
@@ -103,12 +101,55 @@ const showTechnologies = (technologie) => {
     case "Excel":
       return (
         <li>
+          <img src="./images/logo/excel.png" alt="" className="icon" />
+          <span>Excel</span>
+        </li>
+      );
+    case "SASS":
+      return (
+        <li>
+          <img src="./images/logo/sass.svg" alt="" className="icon" />
+          <span>SASS</span>
+        </li>
+      );
+    case "R":
+      return (
+        <li>
+          <img src="./images/logo/R.png" alt="" className="icon" />
+          <span>R Studio</span>
+        </li>
+      );
+    case "Pandas":
+      return (
+        <li>
+          <img src="./images/logo/pandas.svg" alt="" className="icon" />
+          <span>Pandas</span>
+        </li>
+      );
+    case "Matplotlib":
+      return (
+        <li>
+          <img src="./images/logo/matplotlib.png" alt="" className="icon" />
+          <span>Matplotlib</span>
+        </li>
+      );
+    case "Git":
+      return (
+        <li>
+          <img src="./images/logo/git.svg" alt="" className="icon" />
+          <span>Git</span>
+        </li>
+      );
+    case "GitHub":
+      return (
+        <li>
           <img
-            src="./images/excel.png"
+            style={{ borderRadius: "50%" }}
+            src="./images/logo/github.png"
             alt=""
             className="icon"
           />
-          <span>Excel</span>
+          <span>GitHub</span>
         </li>
       );
     default:

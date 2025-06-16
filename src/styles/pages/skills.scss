@@ -1,0 +1,50 @@
+.container-skills {
+    position: relative;
+    z-index: 1;
+    background: black;
+    margin-top: 250px;
+
+    .flower {
+        position: absolute;
+        width: 400px;
+        aspect-ratio: 1;
+        background: url('../../../public/images/flower.webp') center/cover;
+        top: 0;
+        left: 50%;
+        z-index: -1;
+        opacity: 0.5;
+    }
+
+    h2 {
+        background: black;
+        box-shadow: 0 0 40px 50px black;
+        padding-top: 20px;
+    }
+
+    ul {
+        width: 90%;
+        max-width: 900px;
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 0;
+        background: black;
+
+        li {
+            @include centerChild;
+            gap: 5px;
+            background: rgba(134, 134, 134, 0.2);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 30px;
+            border: solid 1px white;
+
+            .icon {
+                width: 20px;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
