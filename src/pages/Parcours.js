@@ -17,26 +17,26 @@ const Parcours = () => {
               ["ISM-AG", "MIASHS", "Bac", "U9"].includes(activity.identity)
             )
             .map((activity) => (
-              <Activity activity={activity} />
+              <Activity key={activity.identity} activity={activity} />
             ))}
           <h3>Projets universitaire</h3>
           {activities
             .filter((activity) =>
-              ["BI", "VBA", "Web scraping"].includes(activity.identity)
+              ["BI", "VBA", "Web_scraping"].includes(activity.identity)
             )
             .sort((a, b) => a.period - b.period)
             .map((activity) => (
-              <Activity activity={activity} />
+              <Activity key={activity.identity} activity={activity} />
             ))}
         </div>
         <div className="route">
           <h3>Expèriences</h3>
           {activities
             .filter((activity) =>
-              ["IRIT", "Vialle Construction"].includes(activity.identity)
+              ["IRIT_Ex", "Vialle_Construction"].includes(activity.identity)
             )
             .map((activity) => (
-              <Activity activity={activity} />
+              <Activity key={activity.identity} activity={activity} />
             ))}
           <h3>Petit Job</h3>
           {activities
@@ -45,7 +45,7 @@ const Parcours = () => {
             )
             .sort((a, b) => a.period - b.period)
             .map((activity) => (
-              <Activity activity={activity} />
+              <Activity key={activity.identity} activity={activity} />
             ))}
         </div>
       </div>

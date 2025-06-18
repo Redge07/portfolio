@@ -15,7 +15,7 @@ const Skills = () => {
     };
   }, []);
   return (
-    <div className="container-skills">
+    <div className="container-skills" id="Other">
       <div className="flower" ref={refFlower}></div>
       <h2>
         Mes outils <span>et langages</span>
@@ -40,7 +40,7 @@ const Skills = () => {
           "Matplotlib",
           "Git",
           "GitHub",
-        ].map(showTechnologies)}
+        ].map((technologie) => showTechnologies(technologie))}
       </ul>
     </div>
   );

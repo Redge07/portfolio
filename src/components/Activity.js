@@ -2,9 +2,10 @@ import React from "react";
 import showTechnologies from "../utils/showTechnologies";
 
 const Activity = ({ activity }) => {
-  const { name, date1, date2, content, technologies, place } = activity;
+  const { identity, name, date1, date2, content, technologies, place } =
+    activity;
   return (
-    <div className="point">
+    <div className="point" id={identity}>
       <div
         style={date1 === "" ? { display: "none" } : { display: "flex" }}
         className="date"
@@ -18,7 +19,7 @@ const Activity = ({ activity }) => {
         >
           {date2}
         </div>
-        <h4>{name}</h4>
+        {name}
         <div className="description">{content}</div>
         <ul
           style={
@@ -28,7 +29,7 @@ const Activity = ({ activity }) => {
           }
           className="technologies"
         >
-          {technologies.map(showTechnologies)}
+          {technologies.map((technologie) => showTechnologies(technologie))}
         </ul>
         <Place place={place} />
       </div>

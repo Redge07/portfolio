@@ -97,7 +97,7 @@ const dataActivities = [
         afin d’expliquer nos analyses et conclusions.
       </p>
     ),
-    technologies: ["Python", "Power BI"],
+    technologies: ["Python", "Power BI", "Pandas"],
     place: "",
   },
   {
@@ -119,7 +119,7 @@ const dataActivities = [
     place: "",
   },
   {
-    identity: "IRIT",
+    identity: "IRIT_Ex",
     period: 1,
     name: (
       <h4>
@@ -152,7 +152,7 @@ const dataActivities = [
     place: "Maison de la recherche UT2J",
   },
   {
-    identity: "Vialle Construction",
+    identity: "Vialle_Construction",
     period: 2,
     name: <h4>Stage Vialle Construction</h4>,
     date1: "",
@@ -178,7 +178,7 @@ const dataActivities = [
     place: "Canada - Saint-Adèle - Vialle Construction",
   },
   {
-    identity: "Web scraping",
+    identity: "Web_scraping",
     period: 2,
     name: <h4>Web Scraping</h4>,
     date1: "2024",

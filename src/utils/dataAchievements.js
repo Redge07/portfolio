@@ -1,5 +1,6 @@
 const dataAchievements = [
   {
+    link_id: "VC",
     link: "https://siteludo.stat-football.fr",
     colorBottom: "yellow",
     colorTop: "rgb(183, 119, 0)",
@@ -14,6 +15,7 @@ const dataAchievements = [
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "React"],
   },
   {
+    link_id: "IRIT",
     link: "https://vacybersecurite-redge07.netlify.app/iustagecapec/",
     colorBottom: "white",
     colorTop: "rgb(0, 157, 255)",
@@ -28,6 +30,7 @@ const dataAchievements = [
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "Python"],
   },
   {
+    link_id: "Movie",
     link: "https://appmovieredge.netlify.app/",
     colorBottom: "rgb(255, 123, 253)",
     colorTop: "rgb(90, 0, 142)",
@@ -39,9 +42,10 @@ const dataAchievements = [
     description:
       "Ce projet m’a permis de maîtriser le framework React en exploitant des fonctionnalités essentielles telles que les hooks, les props, et la gestion avancée des composants. L’application affiche une liste de films consultable via des recherches dynamiques, offre un tri par notes, et permet à l’utilisateur de sauvegarder ses favoris grâce au localStorage.",
     date: "Mars 2025",
-    technologies: ["HTML", "CSS", "JavaScript", "React"],
+    technologies: ["HTML", "SASS", "JavaScript", "React"],
   },
   {
+    link_id: "Crypto",
     link: "https://crypto-market-redge07.netlify.app/",
     colorBottom: "rgb(248, 156, 156)",
     colorTop: "rgb(252, 0, 0)",
@@ -56,6 +60,7 @@ const dataAchievements = [
     technologies: ["React", "Redux"],
   },
   {
+    link_id: "User",
     link: "https://stat-football.fr/",
     colorBottom: "rgb(0, 204, 255)",
     colorTop: "rgb(0, 0, 239)",
@@ -70,6 +75,7 @@ const dataAchievements = [
     technologies: ["HTML", "CSS", "JavaScript", "PHP", "SQL"],
   },
   {
+    link_id: "Bubble",
     link: "https://bubble-game-redge07.netlify.app/",
     colorBottom: "rgb(218, 255, 183)",
     colorTop: "rgb(32, 125, 0)",

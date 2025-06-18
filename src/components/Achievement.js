@@ -3,6 +3,7 @@ import showTechnologies from "../utils/showTechnologies";
 
 const Achievement = ({ achievement }) => {
   const {
+    link_id,
     link,
     colorBottom,
     colorTop,
@@ -32,7 +33,7 @@ const Achievement = ({ achievement }) => {
     };
   }, []);
   return (
-    <div className="achievement">
+    <div className="achievement" id={link_id}>
       <a
         ref={refAchievement}
         href={link}
@@ -60,7 +61,11 @@ const Achievement = ({ achievement }) => {
         </h3>
         <p>{description}</p>
         <span className="date">{date}</span>
-        <ul className="technologies">{technologies.map(showTechnologies)}</ul>
+        <ul className="technologies">
+          {technologies.map((technologie) => (
+            <div key={technologie}>{showTechnologies(technologie)}</div>
+          ))}
+        </ul>
       </div>
     </div>
   );

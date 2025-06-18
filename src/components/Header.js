@@ -1,23 +1,25 @@
 import React from "react";
 
-const Header = () => {
+const Header = ({ setActiveSearch, refLogoSearch }) => {
   return (
     <header>
-      <div className="photo-profil">
-        <img src="./images/tete2.webp" alt="photo de profil" />
-      </div>
-      <ul>
-        <li>Home</li>
-        <li>Réalisations</li>
-        <li>Technologies</li>
-        <li>Stages</li>
-        <li>Projets</li>
-        <li>Parcours</li>
-        <li>Job</li>
-        <li>Centres d'intérêts</li>
-      </ul>
-      <div className="search">
-        <ion-icon name="search-outline"></ion-icon>
+      <div className="container-header">
+        <div className="photo-profil">
+          <img src="./images/tete2.webp" alt="photo de profil" />
+        </div>
+        <ul>
+          <a>Home</a>
+          <a>Réalisations</a>
+          <a>Technologies</a>
+          <a>Stages</a>
+          <a>Projets</a>
+          <a>Parcours</a>
+          <a>Job</a>
+          <a>Centres d'intérêts</a>
+        </ul>
+        <div className="search" onClick={() => setActiveSearch(true)}>
+          <ion-icon name="search-outline" ref={refLogoSearch}></ion-icon>
+        </div>
       </div>
     </header>
   );

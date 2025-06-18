@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
-import Header from "../components/Header";
 import Github from "../components/Github";
 
-const Home = () => {
+const Home = ({ activeSearch }) => {
   const [letterActive, setLetterActive] = useState("");
   const [copy, setCopy] = useState(false);
   const adjectifs = ["développeur", "data analyst", "sportif"];
@@ -61,8 +60,14 @@ const Home = () => {
     }, 100);
   };
   return (
-    <div className="container-home">
-      <Header />
+    <div
+      className="container-home"
+      style={
+        activeSearch
+          ? { filter: "blur(5px)", pointerEvents: "none", opacity: 0.5 }
+          : { filter: "none", pointerEvents: "auto", opacity: 1 }
+      }
+    >
       <div className="cover">
         <div className="name">
           <h2>Régis Mathon</h2>

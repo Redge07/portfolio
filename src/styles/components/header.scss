@@ -1,53 +1,65 @@
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 1050px;
+    @include centerChild;
     width: 100%;
-    gap: 30px;
-    margin: 0 auto;
-    z-index: 1;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    position: fixed;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    padding: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
 
-    .photo-profil {
-        min-width: 100px;
-        min-height: 100px;
-        max-width: 100px;
-        max-height: 100px;
-        border-radius: 50%;
-        overflow: hidden;
-
-        img {
-            object-fit: cover;
-            width: 100px;
-            height: 100px;
-        }
-    }
-
-    ul {
+    .container-header {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 10px;
-        background: rgba(85, 85, 85, 0.2);
-        padding: 10px;
-        border-radius: 50px;
-        border: solid 1px rgb(87, 87, 87);
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1050px;
+        width: 100%;
+        gap: 30px;
 
-        li {
-            padding: 5px 10px;
-            color: $whiteDark;
-            transition: 0.5s;
-            cursor: pointer;
-            border-radius: 50px;
+        .photo-profil {
+            min-width: 100px;
+            min-height: 100px;
+            max-width: 100px;
+            max-height: 100px;
+            border-radius: 50%;
+            overflow: hidden;
 
-            &:hover {
-                background: $backgroundDark;
-                color: white;
+            img {
+                object-fit: cover;
+                width: 100px;
+                height: 100px;
             }
         }
-    }
 
-    .search {
-        @include centerChild;
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 10px;
+            background: rgba(85, 85, 85, 0.5);
+            padding: 10px;
+            border-radius: 50px;
+            border: solid 1px rgb(87, 87, 87);
+
+            a {
+                padding: 5px 10px;
+                color: $whiteDark;
+                transition: 0.5s;
+                cursor: pointer;
+                border-radius: 50px;
+
+                &:hover {
+                    background: $backgroundDark;
+                    color: white;
+                }
+            }
+        }
+
+        .search {
+            @include centerChild;
+            cursor: pointer;
+        }
     }
 }

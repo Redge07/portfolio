@@ -1,0 +1,111 @@
+.container-search {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    width: 90%;
+    max-width: 500px;
+    background: rgb(21, 21, 21);
+    border-radius: 15px;
+
+    .search {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 15px 10px;
+        gap: 5px;
+        border-bottom: solid 1px gray;
+
+        ion-icon {
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            outline: none;
+            padding: 0 10px;
+            font-family: "poppins";
+            color: white;
+            &::placeholder {
+                color: rgb(142, 142, 142);
+                font-weight: bold;
+                letter-spacing: 2px;
+            }
+        }
+    }
+
+    ul[data-lenis-prevent] {
+        display: flex;
+        flex-direction: column;
+        height: 200px;
+        overflow-y: scroll;
+        margin-top: 30px;
+
+        &::-webkit-scrollbar {
+            width: 8px;
+            /* largeur de la barre verticale */
+        }
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #888;
+            /* couleur du "curseur" */
+            border-radius: 10px;
+
+            &:hover {
+                background: #555;
+                /* au survol */
+            }
+        }
+
+        li {
+            @include centerChild;
+            justify-content: start;
+            margin: 10px 30px;
+            background: rgb(92, 92, 92);
+            padding: 5px 10px;
+            border-radius: 10px;
+            gap: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            color: white;
+
+            &:hover {
+                background: transparent;
+            }
+
+            img {
+                width: 20px;
+            }
+        }
+    }
+
+    p {
+        padding-top: 50px;
+    }
+
+    .links {
+        display: flex;
+        justify-content: start;
+        padding: 10px;
+        gap: 10px;
+        font-size: 1.3rem;
+        border-top: solid 1px gray;
+
+        ion-icon {
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                color: gray;
+            }
+        }
+    }
+}
