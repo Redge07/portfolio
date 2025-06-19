@@ -68,6 +68,7 @@ const Home = ({ activeSearch }) => {
           : { filter: "none", pointerEvents: "auto", opacity: 1 }
       }
     >
+      <div className="smooth" id="home"></div>
       <div className="cover">
         <div className="name">
           <h2>Régis Mathon</h2>

@@ -33,7 +33,8 @@ const Achievement = ({ achievement }) => {
     };
   }, []);
   return (
-    <div className="achievement" id={link_id}>
+    <div className="achievement">
+      <div className="smooth" id={link_id}></div>
       <a
         ref={refAchievement}
         href={link}

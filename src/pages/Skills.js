@@ -15,7 +15,8 @@ const Skills = () => {
     };
   }, []);
   return (
-    <div className="container-skills" id="Other">
+    <div className="container-skills">
+      <div className="smooth" id="Other"></div>
       <div className="flower" ref={refFlower}></div>
       <h2>
         Mes outils <span>et langages</span>

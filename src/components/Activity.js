@@ -5,7 +5,8 @@ const Activity = ({ activity }) => {
   const { identity, name, date1, date2, content, technologies, place } =
     activity;
   return (
-    <div className="point" id={identity}>
+    <div className="point">
+      <div className="smooth" id={identity}></div>
       <div
         style={date1 === "" ? { display: "none" } : { display: "flex" }}
         className="date"

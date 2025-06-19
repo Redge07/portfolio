@@ -64,8 +64,15 @@ const Search = ({ setActiveSearch }) => {
         )}
       </ul>
       <div className="links">
-        <ion-icon name="logo-linkedin"></ion-icon>
-        <ion-icon name="logo-github"></ion-icon>
+        <a
+          href="https://www.linkedin.com/in/r%C3%A9gis-mathon-661225300/"
+          target="_blank"
+        >
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+        <a href="https://github.com/Redge07" target="_blank">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
       </div>
     </div>
   );
