@@ -33,7 +33,9 @@ const Parcours = () => {
             ))}
         </div>
         <div className="route">
-          <h3>Expèriences</h3>
+          <h3>
+            Expèriences <div className="smooth" id="stages"></div>
+          </h3>
           {activities
             .filter((activity) =>
               ["IRIT_Ex", "Vialle_Construction"].includes(activity.identity)

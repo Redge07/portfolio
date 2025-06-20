@@ -11,7 +11,7 @@ const Header = ({ setActiveSearch, refLogoSearch }) => {
           <a href="#home">Home</a>
           <a href="#realisations">Réalisations</a>
           <a href="#Other">Technologies</a>
-          <a href="#parcours">Stages</a>
+          <a href="#stages">Stages</a>
           <a href="#projets">Projets</a>
           <a href="#parcours">Parcours</a>
           <a href="#job">Job</a>

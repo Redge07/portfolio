@@ -142,7 +142,14 @@ $black: black;
         width: 100%;
         height: 100px;
         top: 100vh;
-        transform: translateY(-100%);
+        transform: translateY(0%);
+        animation: 1s circle linear forwards;
+
+        @keyframes circle {
+            to {
+                transform: translateY(-100%);
+            }
+        }
 
         div {
             position: absolute;
@@ -150,12 +157,18 @@ $black: black;
             aspect-ratio: 1;
             background: black;
             border-top: solid 5px white;
-            box-shadow: 0 0 100px 0 white, 0 0 100px 0 purple, 0 0 300px 100px blue,
-                inset 0 0 15px 0 white;
             border-radius: 50%;
             left: 50%;
             top: 0;
             transform: translateX(-50%);
+            animation: 3s light linear forwards;
+
+            @keyframes light {
+                to {
+                    box-shadow: 0 0 100px 0 white, 0 0 100px 0 purple, 0 0 300px 100px blue,
+                        inset 0 0 15px 0 white;
+                }
+            }
         }
     }
 

@@ -55,6 +55,7 @@ const Search = ({ setActiveSearch }) => {
             )
             .map((technologie) => (
               <a
+                key={technologie[0]}
                 href={"#" + technologie[1]}
                 onClick={() => setActiveSearch(false)}
               >

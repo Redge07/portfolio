@@ -7,6 +7,8 @@ import Parcours from "./pages/Parcours";
 import Skills from "./pages/Skills";
 import Search from "./components/Search";
 import Header from "./components/Header";
+import Interets from "./pages/Interets";
+import Footer from "./components/Footer";
 
 const App = () => {
   const nbEtoiles = 60;
@@ -54,7 +56,7 @@ const App = () => {
 
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 1.5,
+      duration: 1.2,
       smooth: true,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
     });
@@ -103,6 +105,8 @@ const App = () => {
       <Realisations />
       <Parcours />
       <Skills />
+      <Interets />
+      <Footer />
       {activeSearch && (
         <div className="search-app" ref={refSearch}>
           <Search setActiveSearch={setActiveSearch} />
