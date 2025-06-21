@@ -18,7 +18,7 @@ const Search = ({ setActiveSearch }) => {
     ["Beautiful Soup", "IRIT_Ex"],
     ["Excel", "VBA"],
     ["VBA", "VBA"],
-    ["R", "Other"],
+    ["R Studio", "Other"],
     ["Pandas", "BI"],
     ["Matplotlib", "Other"],
     ["Git", "Other"],

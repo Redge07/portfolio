@@ -41,6 +41,11 @@ $black: black;
     h2 {
         text-shadow: 0 0 30px;
         font-size: 3rem;
+        padding: 0 10px;
+
+        @media screen and (max-width: 700px) {
+            font-size: 1.8rem;
+        }
 
         span {
             font-family: "Indie";
@@ -48,6 +53,10 @@ $black: black;
             background: linear-gradient(288deg, #ff8000, #f0c 53.2394%, #04f);
             -webkit-text-fill-color: transparent;
             -webkit-background-clip: text;
+
+            @media screen and (max-width: 700px) {
+                font-size: 2.2rem;
+            }
         }
     }
 
@@ -56,6 +65,10 @@ $black: black;
         color: white;
         padding: 5px 10px;
         border-radius: 10px;
+
+        @media screen and (max-width: 700px) {
+            font-size: 0.9rem;
+        }
     }
 
     .technologies {
@@ -72,6 +85,10 @@ $black: black;
             padding: 5px 10px;
             border-radius: 30px;
             border: solid 1px white;
+
+            @media screen and (max-width: 700px) {
+                font-size: 0.8rem;
+            }
 
             .icon {
                 width: 20px;

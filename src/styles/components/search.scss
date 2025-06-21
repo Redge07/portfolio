@@ -16,9 +16,11 @@
         padding: 15px 10px;
         gap: 5px;
         border-bottom: solid 1px gray;
+        position: relative;
 
         ion-icon {
             font-size: 1.2rem;
+            min-width: 20px;
             cursor: pointer;
         }
 
@@ -30,11 +32,27 @@
             padding: 0 10px;
             font-family: "poppins";
             color: white;
+
             &::placeholder {
                 color: rgb(142, 142, 142);
                 font-weight: bold;
                 letter-spacing: 2px;
+
+                @media screen and (max-width: 700px) {
+                    font-size: 12px;
+                }
             }
+        }
+
+        input[type="text"] {
+            font-size: 16px;
+        }
+
+        & ion-icon:nth-child(3) {
+            position: absolute;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
         }
     }
 

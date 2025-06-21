@@ -4,6 +4,12 @@ const Header = ({ setActiveSearch, refLogoSearch }) => {
   return (
     <header>
       <div className="container-header">
+        <div
+          className="go-top"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+        >
+          <ion-icon name="arrow-up-outline"></ion-icon>
+        </div>
         <div className="photo-profil">
           <img src="./images/tete2.webp" alt="photo de profil" />
         </div>

@@ -86,16 +86,14 @@ const Home = ({ activeSearch }) => {
           </p>
         </div>
         <div className="links">
-          <Github />
-          <div className="cv">
-            <a
-              href="https://www.vialleconstruction.ca/realisations/IMG/Traverse/1%20(1).webp"
-              download
-              target="_blank"
-            >
-              Télécharger mon CV
-            </a>
-            <ion-icon name="download-outline"></ion-icon>
+          <div className="left-links">
+            <Github />
+            <div className="cv">
+              <a href="./images/CV.pdf" download target="_blank">
+                Télécharger mon CV
+              </a>
+              <ion-icon name="download-outline"></ion-icon>
+            </div>
           </div>
           <div className="mail">
             <a href="mailto:mathonregis28@gmail.com">mathonregis28@gmail.com</a>
