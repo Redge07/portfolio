@@ -1,7 +1,7 @@
 const dataAchievements = [
   {
     link_id: "VC",
-    link: "https://siteludo.stat-football.fr",
+    link: "https://vialleconstruction.ca",
     colorBottom: "yellow",
     colorTop: "rgb(183, 119, 0)",
     colorBox: "rgb(255, 255, 48)",
