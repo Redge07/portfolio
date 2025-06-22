@@ -137,10 +137,10 @@ const dataActivities = [
         </a>{" "}
         , qui recense les attaques en cybersécurité : j'y ai effectué du web
         scraping afin de concevoir une base de données et par la suite j'ai
-        réalisé une interface utilisateur pour consulter la base de données. On
-        pouvait voir le site internet comme une base de données où chaque
-        attaque était associée à un identifiant, un nom, une description et
-        d'autres information. <br />
+        réalisé une interface utilisateur pour consulter la base de données. Le
+        site internet représente une base de données où chaque attaque était
+        associée à un identifiant, un nom, une description et d'autres
+        information. <br />
         <br />
         Ma mission consistait à extraire et structurer ces données afin de créer
         un tableau résumant les informations clés de chaque attaque. Cette tâche

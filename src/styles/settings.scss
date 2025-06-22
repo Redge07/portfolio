@@ -122,6 +122,10 @@ $black: black;
             transition: 1s;
             border-radius: 50%;
 
+            @media screen and (max-width: 500px) {
+                display: none;
+            }
+
             @keyframes etoile {
                 12% {
                     transform: translate(38px, 13px);
@@ -164,7 +168,7 @@ $black: black;
 
         @keyframes circle {
             to {
-                transform: translateY(-100%);
+                transform: translateY(-150%);
             }
         }
 
