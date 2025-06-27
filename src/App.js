@@ -12,14 +12,21 @@ import Footer from "./components/Footer";
 
 const App = () => {
   const nbEtoiles = 60;
+  // Liste pour faire le map qui fera un div pour chaque étoile
   const listEtoile = [];
+  // La balise qui contient toutes les étoiles
   const refEtoiles = useRef();
+  // Pour savoir si y'a le composant pour rechercher un outils
   const [activeSearch, setActiveSearch] = useState(false);
+  // Balise qui contient le composant Search
   const refSearch = useRef();
+  // L'icone en forme de loupe
   const refLogoSearch = useRef();
+  // Pour remplir la liste des étoiles pour le map
   for (let i = 1; i <= nbEtoiles; i++) {
     listEtoile.push(i);
   }
+  // Un useEffect pour ajouter un changement d'opacity different entre chaque étoile
   useEffect(() => {
     const etoiles = refEtoiles.current.querySelectorAll("div");
     etoiles.forEach((etoile) => {
@@ -38,6 +45,7 @@ const App = () => {
     });
   }, []);
 
+  // Un useEffect qui ajoute un évènement de clique sur la plage pour dire que le composant de search disparait si on ne clique pas sur lui ou sur le logo de la loupe
   useEffect(() => {
     const handleClick = (e) => {
       if (
@@ -54,6 +62,7 @@ const App = () => {
     };
   }, []);
 
+  // Un useEffect qui ajoute un design stylé au scroll
   useEffect(() => {
     const lenis = new Lenis({
       duration: 1.2,
@@ -74,14 +83,11 @@ const App = () => {
   return (
     <div
       className="App"
+      // Quand le composant de search est à l'écran, la page est de taille 100 vh pour empecher le scroll
       style={activeSearch ? { height: "100vh" } : { height: "auto" }}
     >
       <Header setActiveSearch={setActiveSearch} refLogoSearch={refLogoSearch} />
-      <Home
-        activeSearch={activeSearch}
-        setActiveSearch={setActiveSearch}
-        refLogoSearch={refLogoSearch}
-      />
+      <Home activeSearch={activeSearch} />
       <div className="etoiles" ref={refEtoiles}>
         {listEtoile.map((etoile) => {
           const left = Math.floor(Math.random() * 100);

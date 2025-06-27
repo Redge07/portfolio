@@ -1,5 +1,4 @@
 import React from "react";
-import showTechnologies from "../utils/showTechnologies";
 import activities from "../utils/dataActivities";
 import Activity from "../components/Activity";
 
@@ -13,10 +12,13 @@ const Parcours = () => {
       <div className="routes">
         <div className="route">
           <h3>Formations</h3>
+          {/* Représente un tableau composé d'objet qui contiennent toutes les informations d'un point de parcours */}
           {activities
+            // Ici on affiche que les activités qui parle du tableau en questions
             .filter((activity) =>
               ["ISM-AG", "MIASHS", "Bac", "U9"].includes(activity.identity)
             )
+            // On affiche le point en envoyant au composant Activity, l'objet qui correspond à toutes les informations de ce point
             .map((activity) => (
               <Activity key={activity.identity} activity={activity} />
             ))}

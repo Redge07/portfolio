@@ -16,7 +16,9 @@ const Realisations = () => {
       <Github />
 
       <div className="achievements">
+        {/* achievements qui est un tableau composé d'objet qui représente chaque réalisations en dev web */}
         {achievements.map((achievement) => (
+          // Pour chaque réalisations on affiche la réalisations avec l'objet du tableau qui correspond a cette réalisation
           <Achievement key={achievement.link} achievement={achievement} />
         ))}
       </div>

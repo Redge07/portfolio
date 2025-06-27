@@ -2,6 +2,7 @@ import React, { useEffect, useRef } from "react";
 
 const Interets = () => {
   const refInterests = useRef();
+  // Fonction pour ajouter un effet quand les balises apparaisent à l'écran
   useEffect(() => {
     const observer = new IntersectionObserver((entries) => {
       entries.forEach((entry) => {

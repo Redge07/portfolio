@@ -63,7 +63,11 @@ const Achievement = ({ achievement }) => {
         <p>{description}</p>
         <span className="date">{date}</span>
         <ul className="technologies">
+          {/* technologies représente les outils utilisé pour la réalisation web */}
+          {/* Un map qui passe toute les technologie de la réalisations web en
+          question */}
           {technologies.map((technologie) => (
+            // showTechnologie lance un switch qui en fonction du nom de la technologie, affiche la technologie avec ces propriéte
             <div key={technologie}>{showTechnologies(technologie)}</div>
           ))}
         </ul>
