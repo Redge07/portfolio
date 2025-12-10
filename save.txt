@@ -2,5 +2,10 @@ Alternance
 Plonge restaurant
 association Mézilhac
 Node js
+React Native
+App Pokémon
 CV a jour aussi du coup
+Linkedin a jour du coup
 App Pétanque
+Ajouter dernier projet power bi sur github
+Github + structuré
