@@ -28,6 +28,8 @@ const Skills = () => {
           "JavaScript",
           "SASS",
           "React",
+          "ReactNative",
+          "Node.js",
           "PHP",
           "Python",
           "Redux",

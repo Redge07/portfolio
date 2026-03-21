@@ -16,7 +16,7 @@ const Parcours = () => {
           {activities
             // Ici on affiche que les activités qui parle du tableau en questions
             .filter((activity) =>
-              ["ISM-AG", "MIASHS", "Bac", "U9"].includes(activity.identity)
+              ["ISM-AG", "MIASHS", "Bac", "U9"].includes(activity.identity),
             )
             // On affiche le point en envoyant au composant Activity, l'objet qui correspond à toutes les informations de ce point
             .map((activity) => (
@@ -27,7 +27,7 @@ const Parcours = () => {
           </h3>
           {activities
             .filter((activity) =>
-              ["BI", "VBA", "Web_scraping"].includes(activity.identity)
+              ["BI", "VBA", "Web_scraping"].includes(activity.identity),
             )
             .sort((a, b) => a.period - b.period)
             .map((activity) => (
@@ -40,7 +40,7 @@ const Parcours = () => {
           </h3>
           {activities
             .filter((activity) =>
-              ["IRIT_Ex", "Vialle_Construction"].includes(activity.identity)
+              ["IRIT_Ex", "Vialle_Construction"].includes(activity.identity),
             )
             .map((activity) => (
               <Activity key={activity.identity} activity={activity} />
@@ -50,9 +50,11 @@ const Parcours = () => {
           </h3>
           {activities
             .filter((activity) =>
-              ["Bénévolat", "Myrtilles"].includes(activity.identity)
+              ["Bénévolat", "Myrtilles", "Association", "Plongeur"].includes(
+                activity.identity,
+              ),
             )
-            .sort((a, b) => a.period - b.period)
+            .sort((a, b) => b.period - a.period)
             .map((activity) => (
               <Activity key={activity.identity} activity={activity} />
             ))}

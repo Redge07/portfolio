@@ -140,6 +140,30 @@ const showTechnologies = (technologie) => {
           <span>Git</span>
         </li>
       );
+    case "ReactNative":
+      return (
+        <li>
+          <img
+            style={{ scale: 1.7 }}
+            src="./images/logo/reactnative.png"
+            alt=""
+            className="icon"
+          />
+          <span>React Native</span>
+        </li>
+      );
+    case "Node.js":
+      return (
+        <li>
+          <img
+            style={{ scale: 1.7 }}
+            src="./images/logo/nodejs.png"
+            alt=""
+            className="icon"
+          />
+          <span>Node.js</span>
+        </li>
+      );
     case "GitHub":
       return (
         <li>

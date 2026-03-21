@@ -97,17 +97,21 @@ const Home = ({ activeSearch }) => {
           </p>
         </div>
         <div className="formation">
-          <p>
+          {/* <p>
             Master <span>I</span>ngénierie et <span>S</span>cience des données
             orientées <span>M</span>étiers - <span>A</span>ppliquées à la{" "}
             <span>G</span>estion de production
+          </p> */}
+          <p>
+            <span>C</span>hargé de projets de digitalisation - <span>C</span>
+            ollins Aérospace - <span>A</span>lternance - <span>2025/2026</span>
           </p>
         </div>
         <div className="links">
           <div className="left-links">
             <Github />
             <div className="cv">
-              <a href="./images/CV.pdf" download target="_blank">
+              <a href="./images/CV2.pdf" download target="_blank">
                 Télécharger mon CV
               </a>
               <ion-icon name="download-outline"></ion-icon>

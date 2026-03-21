@@ -5,6 +5,7 @@ Node js
 React Native
 App Pokémon
 CV a jour aussi du coup
+Changer design CV
 Linkedin a jour du coup
 App Pétanque
 Ajouter dernier projet power bi sur github

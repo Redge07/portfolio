@@ -199,7 +199,7 @@ const dataActivities = [
   },
   {
     identity: "Bénévolat",
-    period: 2,
+    period: 1,
     name: <h4>Bénévolat Festival</h4>,
     date1: "2022-2024",
     date2: "",
@@ -214,9 +214,9 @@ const dataActivities = [
   },
   {
     identity: "Myrtilles",
-    period: 1,
+    period: 2,
     name: <h4>Cueillette de myrtilles</h4>,
-    date1: "2020-2024",
+    date1: "2020-2025",
     date2: "",
     content: (
       <p>
@@ -226,6 +226,37 @@ const dataActivities = [
         cueillette au lever du soleil, alors que la rosée est encore présente.
         Je travaille ainsi jusqu’à 11h, puis je trie les myrtilles à l’aide
         d’une machine dans l’après-midi pour les vendre triées.
+      </p>
+    ),
+    technologies: [],
+    place: "Mézilhac - Ardèche",
+  },
+  {
+    identity: "Association",
+    period: 3,
+    name: <h4>Membre d'une association événementielle</h4>,
+    date1: "2025",
+    date2: "",
+    content: (
+      <p>
+        Contribution à la mise en place d’événements locaux (concerts, tournois
+        de pétanque, repas, animations), en coordination avec les membres de
+        l’association.
+      </p>
+    ),
+    technologies: [],
+    place: "Mézilhac - Ardèche",
+  },
+  {
+    identity: "Plongeur",
+    period: 4,
+    name: <h4>Plongeur en restauration</h4>,
+    date1: "2025",
+    date2: "",
+    content: (
+      <p>
+        Job en restauration pendant l'été 2025, travail en plonge pendant le
+        service.
       </p>
     ),
     technologies: [],
