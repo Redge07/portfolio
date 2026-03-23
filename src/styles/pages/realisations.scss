@@ -155,14 +155,24 @@
 
         p {
           color: gray;
+          position: relative;
+
+          .voirplus {
+            color: white;
+            background: rgb(46, 46, 46);
+            padding: 1px 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+            width: fit-content;
+            cursor: pointer;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+          }
 
           @media screen and (max-width: 700px) {
             font-size: 0.9rem;
           }
-        }
-        .texte {
-          height: 300px;
-          overflow: hidden;
         }
       }
     }

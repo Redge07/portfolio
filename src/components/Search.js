@@ -23,9 +23,12 @@ const Search = ({ setActiveSearch }) => {
     ["Matplotlib", "Other"],
     ["Git", "Other"],
     ["GitHub", "Other"],
+    ["Node.js", "Petanque"],
+    ["Tailwind", "Petanque"],
+    ["ReactNative", "Pokemon"],
   ];
   const countSearch = technologies.filter((technologie) =>
-    technologie[0].toLowerCase().includes(search.toLowerCase())
+    technologie[0].toLowerCase().includes(search.toLowerCase()),
   );
   useEffect(() => {
     refInput.current?.focus();
@@ -51,7 +54,7 @@ const Search = ({ setActiveSearch }) => {
         ) : (
           technologies
             .filter((technologie) =>
-              technologie[0].toLowerCase().includes(search.toLowerCase())
+              technologie[0].toLowerCase().includes(search.toLowerCase()),
             )
             .map((technologie) => (
               <a

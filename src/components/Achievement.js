@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import showTechnologies from "../utils/showTechnologies";
 
 const Achievement = ({ achievement }) => {
@@ -32,6 +32,7 @@ const Achievement = ({ achievement }) => {
       observer.unobserve(refAchievement.current);
     };
   }, []);
+  const [showDescription, setShowDescription] = useState(false);
   return (
     <div className="achievement">
       <div className="smooth" id={link_id}></div>
@@ -60,8 +61,29 @@ const Achievement = ({ achievement }) => {
           {title}
           <div className="bar" style={{ background: colorTop }}></div>
         </h3>
-        <p className={`${link_id === "Petanque" ? "texte" : ""}`}>
+        <p
+          style={
+            link_id == "Petanque"
+              ? showDescription
+                ? { height: "auto" }
+                : { height: "300px", overflow: "hidden" }
+              : {}
+          }
+        >
           {description}
+          {link_id == "Petanque" && (
+            <div
+              onClick={() => setShowDescription(!showDescription)}
+              className="voirplus"
+              style={
+                showDescription
+                  ? { transform: "translate(0%, 100%)" }
+                  : { transform: "translate(0%, 0%)" }
+              }
+            >
+              Voir {showDescription ? "moins" : "plus"}
+            </div>
+          )}
         </p>
         <span className="date">{date}</span>
         <ul className="technologies">
@@ -69,7 +91,7 @@ const Achievement = ({ achievement }) => {
           {/* Un map qui passe toute les technologie de la réalisations web en
           question */}
           {technologies.map((technologie) => (
-            // showTechnologie lance un switch qui en fonction du nom de la technologie, affiche la technologie avec ces propriéte
+            // showTechnologie lance un switch qui en fonction du nom de la technologie, affiche la technologie avec ces propriétes
             <div key={technologie}>{showTechnologies(technologie)}</div>
           ))}
         </ul>
