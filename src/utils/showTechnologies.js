@@ -140,6 +140,13 @@ const showTechnologies = (technologie) => {
           <span>Git</span>
         </li>
       );
+    case "Tailwind":
+      return (
+        <li>
+          <img src="./images/logo/tailwind.png" alt="" className="icon" />
+          <span>Tailwind</span>
+        </li>
+      );
     case "ReactNative":
       return (
         <li>

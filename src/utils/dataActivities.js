@@ -119,8 +119,44 @@ const dataActivities = [
     place: "",
   },
   {
+    identity: "Collins_Aerospace",
+    period: 3,
+    name: <h4>Alternance Collins Aerospace</h4>,
+    date1: "",
+    date2: "2025-2026",
+    content: (
+      <p>
+        Chargé de projets de digitalisation, mon but est de développer des
+        outils pour gagner en efficacité sur certains processus de l'entreprise.
+        Je développe une interface utilisateur en React qui permet de suivre la
+        localisation des caisses stockées au sein de l'entreprise sous forme de
+        carte et de faire un CRUD (Create, Read, Update, Delete) sur leurs
+        données.
+        <br />
+        <br />
+        J'ai aussi créé un outil pour automatiser un processus et faire gagner
+        du temps à l'équipe, en utilisant des macros VBA sur Excel. Ce processus
+        allait de la collecte des données depuis une plateforme externe, jusqu'à
+        leur mise en forme dans un tableau Excel, pour finalement développer des
+        fonctionnalités à partir de ce tableau. On m'a également confié la prise
+        en main de certains outils utilisés spécifiquement au sein de
+        l'entreprise, pour aider les personnes qui en avaient besoin au
+        quotidien.
+        <br />
+        <br />
+        Ce que cette alternance m'apprend vraiment, au-delà des compétences
+        techniques, c'est de comprendre le processus sur lequel je travaille et
+        de saisir le besoin de la personne du métier. La technique, je l'ai mais
+        arriver à traduire un besoin métier en une solution concrète qui répond
+        vraiment aux attentes, c'est là le point important.
+      </p>
+    ),
+    technologies: ["React", "Excel", "VBA", "Power BI"],
+    place: "Colomiers",
+  },
+  {
     identity: "IRIT_Ex",
-    period: 1,
+    period: 2,
     name: (
       <h4>
         Stage IRIT
@@ -153,7 +189,7 @@ const dataActivities = [
   },
   {
     identity: "Vialle_Construction",
-    period: 2,
+    period: 1,
     name: <h4>Stage Vialle Construction</h4>,
     date1: "",
     date2: "06 Mai - 28 Juin 2024",

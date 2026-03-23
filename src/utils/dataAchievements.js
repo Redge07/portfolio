@@ -1,5 +1,57 @@
 const dataAchievements = [
   {
+    link_id: "Petanque",
+    link: "https://petanque-play-pro.base44.app/demo",
+    colorBottom: "rgb(39, 245, 207)",
+    colorTop: "rgb(53, 148, 102)",
+    colorBox: "rgb(184, 255, 219)",
+    summary:
+      "Cette application a pour but de faciliter l’organisation de tournois de pétanque en permettant aux organisateurs de créer leurs tournois, d’inscrire des joueurs, et de suivre les résultats en temps réel. L'application est encore en cours de développement mais je mets a disposition une version démo pour ce faire une idée de l'application",
+    image: "petanque",
+    title: "Application Full Stack Pétanque",
+    description: (
+      <p>
+        Mon plus gros projet en développement web, c'est une application full
+        stack que je développe seul, ce qui me fait utiliser toutes les
+        compétences que j'ai acquises. Le front-end est développé en React et le
+        back-end en Node.js avec une base de données SQL. Côté front-end,
+        l'application est séparée en 2 grandes sections : une première pour les
+        organisateurs de tournois, qui peuvent tout gérer, de l'inscription des
+        joueurs jusqu'à la gestion du tournoi pour arriver au vainqueur final.
+        La seconde est dédiée aux participants, qui peuvent s'inscrire aux
+        tournois créés par les organisateurs et suivre leur avancée en
+        connaissant leur adversaire et les résultats des autres matchs. <br />{" "}
+        <br />
+        Côté back-end, j'ai mis en place une API REST qui gère toutes les
+        requêtes du front-end. C'est vraiment la partie la plus complexe du
+        projet, avec la gestion de la logique métier pour le déroulement du
+        tournoi et la gestion des utilisateurs avec leurs rôles (organisateur ou
+        participant). Derrière, une base de données SQL stocke toutes les
+        données de l'application : les users, les tournois, les matchs, les
+        joueurs, etc. <br /> <br />
+        Il y a aussi un système d'authentification avec création de compte via
+        email et mot de passe, suivi d'une confirmation par mail, mais aussi une
+        connexion rapide via Google en un clic. La session est ensuite gérée
+        avec des tokens JWT. J'ai pour objectif de rendre l'application
+        disponible sur iOS et Android. Pour ça, j'ai découvert React Native, un
+        framework mobile qui repose sur les mêmes bases que React, ce qui m'a
+        permis de réutiliser une grande partie du code front-end pour le mobile.{" "}
+        <br /> <br />
+        J'ai aussi commencé à intégrer des fonctionnalités comme l'envoi de
+        notifications pour prévenir les joueurs de leur prochain match, la
+        récupération de la localisation des joueurs pour aider les
+        organisateurs, et l'intégration de Stripe pour des fonctionnalités
+        premium. L'objectif final est d'avoir le front-end web hébergé sur
+        Hostinger, le back-end sur Render, la base de données sur Hostinger
+        également, et l'application mobile disponible sur iOS et Android.
+        L'application est encore en cours de développement, mais je mets à
+        disposition une version démo pour se faire une idée.
+      </p>
+    ),
+    date: "Septembre 2025 - ...",
+    technologies: ["React", "Node.js", "SQL", "Tailwind", "ReactNative"],
+  },
+  {
     link_id: "VC",
     link: "https://vialleconstruction.ca",
     colorBottom: "yellow",
@@ -66,7 +118,7 @@ const dataAchievements = [
     colorTop: "rgb(255, 0, 102)",
     colorBox: "rgb(196, 68, 68)",
     summary:
-      "Application développée en React Native qui m'a permis de décourir le domaine du développement mobile. L'application permet de parcourir une liste de Pokémon et d’accéder à des détails spécifiques pour chaque créature.",
+      "Application développée en React Native qui m'a permis de décourir le domaine du développement mobile. L'application permet de parcourir une liste de Pokémon et d’accéder à des détails spécifiques pour chaque créature. (L'application est fait pour une application mobile classique, mais elle est également compatible avec les navigateurs web.)",
     image: "pokemon",
     title: "Pokemon Explorer",
     description:

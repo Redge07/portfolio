@@ -39,7 +39,7 @@ const Achievement = ({ achievement }) => {
         ref={refAchievement}
         href={link}
         style={{
-          background: `linear-gradient(to top, ${colorBottom}, ${colorTop} 50%, ${colorTop} 100%)`,
+          background: `linear-gradient( ${link_id == "Petanque" ? "to top left" : "to top"}, ${colorBottom}, ${colorTop} 50%, ${colorTop} 100%)`,
         }}
         target="_blank"
       >
@@ -60,7 +60,9 @@ const Achievement = ({ achievement }) => {
           {title}
           <div className="bar" style={{ background: colorTop }}></div>
         </h3>
-        <p>{description}</p>
+        <p className={`${link_id === "Petanque" ? "texte" : ""}`}>
+          {description}
+        </p>
         <span className="date">{date}</span>
         <ul className="technologies">
           {/* technologies représente les outils utilisé pour la réalisation web */}

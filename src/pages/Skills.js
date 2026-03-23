@@ -30,6 +30,7 @@ const Skills = () => {
           "React",
           "ReactNative",
           "Node.js",
+          "Tailwind",
           "PHP",
           "Python",
           "Redux",

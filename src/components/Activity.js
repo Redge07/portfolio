@@ -1,11 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 import showTechnologies from "../utils/showTechnologies";
 
 const Activity = ({ activity }) => {
   const { identity, name, date1, date2, content, technologies, place } =
     activity;
+  const [activeScreen, setActiveScreen] = useState(false);
   return (
     <div className="point">
+      {activeScreen && (
+        <div className="container-screen">
+          <img src="./images/powerbi.png" alt="" />
+          <ion-icon
+            name="close-outline"
+            onClick={() => setActiveScreen(false)}
+          ></ion-icon>
+        </div>
+      )}
       <div className="smooth" id={identity}></div>
       <div
         style={date1 === "" ? { display: "none" } : { display: "flex" }}
@@ -21,7 +31,14 @@ const Activity = ({ activity }) => {
           {date2}
         </div>
         {name}
-        <div className="description">{content}</div>
+        <div className="description">
+          {content}{" "}
+          {identity == "BI" && (
+            <p onClick={() => setActiveScreen(true)} className="screen">
+              Voir Screen Rapport
+            </p>
+          )}
+        </div>
         <ul
           style={
             technologies.length === 0
