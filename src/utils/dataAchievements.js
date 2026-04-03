@@ -45,7 +45,30 @@ const dataAchievements = [
         Hostinger, le back-end sur Render, la base de données sur Hostinger
         également, et l'application mobile disponible sur iOS et Android.
         L'application est encore en cours de développement, mais je mets à
-        disposition une version démo pour se faire une idée.
+        disposition une version démo pour se faire une idée. Mon projet le plus
+        ambitieux : une application full stack développée entièrement seul, de A
+        à Z. <br />
+        <br />
+        {/* Front-end (React) — L'app est structurée en deux espaces distincts : un
+        espace organisateur pour gérer l'intégralité du tournoi (inscriptions,
+        matchs, résultats, vainqueur) et un espace participant pour suivre son
+        avancée et connaître ses adversaires en temps réel.
+        <br />
+        <br />
+        Back-end (Node.js + SQL) — Une API REST gère toute la logique métier :
+        déroulement du tournoi, gestion des rôles (organisateur / participant),
+        et persistance des données en base SQL.
+        <br />
+        <br />
+        Authentification — Création de compte par email avec confirmation,
+        connexion Google OAuth en un clic, sessions sécurisées via JWT.
+        <br />
+        <br /> En cours d'intégration — Notifications de match, géolocalisation
+        des joueurs, paiement Stripe pour les fonctionnalités premium.
+        <br />
+        <br /> Objectif final — Web hébergé sur Hostinger/Render + application
+        mobile iOS & Android via React Native, en réutilisant la base de code
+        existante. */}
       </p>
     ),
     date: "Septembre 2025 - ...",

@@ -11,7 +11,7 @@ const Header = ({ setActiveSearch, refLogoSearch }) => {
           <ion-icon name="arrow-up-outline"></ion-icon>
         </div>
         <div className="photo-profil">
-          <img src="./images/tete2.webp" alt="photo de profil" />
+          <img src="./images/tete2.png" alt="photo de profil" />
         </div>
         <ul>
           <a href="#home">Home</a>
