@@ -104,7 +104,11 @@ const Home = ({ activeSearch }) => {
           </p> */}
           <p>
             <span>C</span>hargé de projets de digitalisation - <span>C</span>
-            ollins Aérospace - <span>A</span>lternance - <span>2025/2026</span>
+            ollins Aérospace - <span>A</span>lternance - <span>2025/2026</span>{" "}
+            - <span>M</span>aster <span>I</span>ngénierie et <span>S</span>
+            cience des données orientées <span>M</span>étiers - <span>A</span>
+            ppliquées à la <span>G</span>
+            estion de production
           </p>
         </div>
         <div className="links">

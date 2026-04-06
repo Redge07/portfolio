@@ -1,207 +1,208 @@
 .container-home {
-    margin: 0 auto;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  padding: 30px;
+  padding-top: 100px;
+  z-index: 1;
+  position: relative;
+
+  .cover {
+    flex: 1;
     display: flex;
     flex-direction: column;
-    height: 100vh;
-    padding: 30px;
-    padding-top: 100px;
-    z-index: 1;
-    position: relative;
+    justify-content: space-between;
+    max-height: 600px;
+    width: 100%;
+    max-width: 702px;
+    margin: 50px auto;
 
-    .cover {
-        flex: 1;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        max-height: 500px;
-        width: 100%;
-        max-width: 702px;
-        margin: 50px auto;
+    @media screen and (max-width: 490px) {
+      max-height: 400px;
+    }
+
+    .name {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+    }
+
+    h2 {
+      letter-spacing: 2px;
+      font-size: 50px;
+      color: black;
+      background: white;
+      padding: 5px 20px;
+      box-shadow: -10px -5px 10px 0 rgb(0, 114, 221);
+      border-radius: 10px;
+      text-shadow: 4px 4px 10px gray;
+      position: relative;
+      overflow: hidden;
+      white-space: nowrap;
+
+      @media screen and (max-width: 700px) {
+        font-size: 40px;
+      }
+
+      @media screen and (max-width: 490px) {
+        font-size: 30px;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        height: 300%;
+        width: 20px;
+        background: rgb(255, 255, 255, 0.2);
+        box-shadow:
+          inset 0 0 20px 0 lightgray,
+          0 0 40px 0 lightgray;
+        top: -100%;
+        right: -50%;
+        rotate: -45deg;
+        animation: 7s barre-name ease-in-out infinite;
+
+        @keyframes barre-name {
+          50% {
+            right: calc(150%);
+          }
+        }
+      }
+    }
+
+    .profile {
+      p {
+        font-size: 50px;
+        color: rgb(0, 114, 221);
+        font-weight: bold;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        font-weight: bold;
+
+        @media screen and (max-width: 750px) {
+          font-size: 40px;
+        }
+
+        @media screen and (max-width: 600px) {
+          font-size: 30px;
+        }
 
         @media screen and (max-width: 490px) {
-            max-height: 400px;
+          font-size: 20px;
         }
 
+        span {
+          position: relative;
+          transition: 0.5s;
+          font-weight: bold;
+          color: white;
 
-        .name {
-            display: flex;
-            justify-content: start;
-            align-items: center;
-        }
-
-        h2 {
-            letter-spacing: 2px;
-            font-size: 50px;
-            color: black;
+          &::after {
+            content: "";
+            position: absolute;
+            height: 100%;
+            width: 3px;
             background: white;
-            padding: 5px 20px;
-            box-shadow: -10px -5px 10px 0 rgb(0, 114, 221);
-            border-radius: 10px;
-            text-shadow: 4px 4px 10px gray;
-            position: relative;
-            overflow: hidden;
-            white-space: nowrap;
+            right: -5px;
+            top: 50%;
+            transform: translateY(-50%);
+            animation: 1s barre linear infinite;
 
-            @media screen and (max-width: 700px) {
-                font-size: 40px;
+            @keyframes barre {
+              50% {
+                opacity: 0;
+              }
             }
-
-            @media screen and (max-width: 490px) {
-                font-size: 30px;
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                height: 300%;
-                width: 20px;
-                background: rgb(255, 255, 255, 0.2);
-                box-shadow: inset 0 0 20px 0 lightgray, 0 0 40px 0 lightgray;
-                top: -100%;
-                right: -50%;
-                rotate: -45deg;
-                animation: 7s barre-name ease-in-out infinite;
-
-                @keyframes barre-name {
-                    50% {
-                        right: calc(150%);
-                    }
-                }
-            }
+          }
         }
-
-        .profile {
-            p {
-                font-size: 50px;
-                color: rgb(0, 114, 221);
-                font-weight: bold;
-                letter-spacing: 3px;
-                text-transform: uppercase;
-                font-weight: bold;
-
-                @media screen and (max-width: 750px) {
-                    font-size: 40px;
-                }
-
-                @media screen and (max-width: 600px) {
-                    font-size: 30px;
-                }
-
-                @media screen and (max-width: 490px) {
-                    font-size: 20px;
-                }
-
-                span {
-                    position: relative;
-                    transition: 0.5s;
-                    font-weight: bold;
-                    color: white;
-
-                    &::after {
-                        content: '';
-                        position: absolute;
-                        height: 100%;
-                        width: 3px;
-                        background: white;
-                        right: -5px;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        animation: 1s barre linear infinite;
-
-                        @keyframes barre {
-                            50% {
-                                opacity: 0;
-                            }
-                        }
-                    }
-                }
-            }
-        }
-
-        .formation {
-            p {
-                font-size: 1.5rem;
-
-                @media screen and (max-width: 600px) {
-                    font-size: 1.2rem;
-                }
-
-                @media screen and (max-width: 490px) {
-                    font-size: 1rem;
-                }
-
-
-                span {
-                    color: rgb(0, 114, 221);
-                    font-weight: bold;
-                    font-size: 2rem;
-
-                    @media screen and (max-width: 600px) {
-                        font-size: 1.5rem;
-                    }
-
-                    @media screen and (max-width: 490px) {
-                        font-size: 1.2rem;
-                    }
-
-                }
-            }
-        }
-
-        .links {
-            display: grid;
-            grid-template-columns: 50% 50%;
-            backdrop-filter: blur(10px);
-            padding: 10px;
-            border-radius: 30px;
-
-            @media screen and (max-width: 700px) {
-                grid-template-columns: auto;
-                gap: 20px;
-            }
-
-            a {
-                color: $whiteDark;
-                transition: 0.2s;
-
-                @media screen and (max-width: 700px) {
-                    font-size: 0.9rem;
-                }
-
-                &:hover {
-                    color: white;
-                }
-            }
-
-            .left-links {
-                display: flex;
-                margin: 0 auto;
-
-                .cv {
-                    padding: 0 10px;
-                    @include centerChild;
-                    gap: 5px;
-                    cursor: pointer;
-                }
-            }
-
-            .mail {
-                @include centerChild;
-                gap: 10px;
-
-                button {
-                    color: black;
-                    background: white;
-                    border: none;
-                    font-family: "poppins";
-                    padding: 5px 10px;
-                    border-radius: 10px;
-                    letter-spacing: 3px;
-                    cursor: pointer;
-                    width: 90px;
-                    transition: 0.2s, transform 0.1s;
-                }
-            }
-        }
+      }
     }
+
+    .formation {
+      p {
+        font-size: 1.5rem;
+
+        @media screen and (max-width: 600px) {
+          font-size: 1.2rem;
+        }
+
+        @media screen and (max-width: 490px) {
+          font-size: 1rem;
+        }
+
+        span {
+          color: rgb(0, 114, 221);
+          font-weight: bold;
+          font-size: 2rem;
+
+          @media screen and (max-width: 600px) {
+            font-size: 1.5rem;
+          }
+
+          @media screen and (max-width: 490px) {
+            font-size: 1.2rem;
+          }
+        }
+      }
+    }
+
+    .links {
+      display: grid;
+      grid-template-columns: 50% 50%;
+      backdrop-filter: blur(10px);
+      padding: 10px;
+      border-radius: 30px;
+
+      @media screen and (max-width: 700px) {
+        grid-template-columns: auto;
+        gap: 20px;
+      }
+
+      a {
+        color: $whiteDark;
+        transition: 0.2s;
+
+        @media screen and (max-width: 700px) {
+          font-size: 0.9rem;
+        }
+
+        &:hover {
+          color: white;
+        }
+      }
+
+      .left-links {
+        display: flex;
+        margin: 0 auto;
+
+        .cv {
+          padding: 0 10px;
+          @include centerChild;
+          gap: 5px;
+          cursor: pointer;
+        }
+      }
+
+      .mail {
+        @include centerChild;
+        gap: 10px;
+
+        button {
+          color: black;
+          background: white;
+          border: none;
+          font-family: "poppins";
+          padding: 5px 10px;
+          border-radius: 10px;
+          letter-spacing: 3px;
+          cursor: pointer;
+          width: 90px;
+          transition:
+            0.2s,
+            transform 0.1s;
+        }
+      }
+    }
+  }
 }
